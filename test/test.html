@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8"> <!-- 페이지를 어떤 캐릭터셋으로 읽어들일 것인지를 말해줌. -->
+    <title>HTML의 뼈대</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+        h2 {
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+            font-family: "Nanum Gothic", sans-serif;
+        }
+
+        .first {
+            color: #7768c3;
+        }
+
+        .second {
+            color: #d44535;
+        }
+
+        .third {
+            color: #419a31;
+        }
+
+        p {
+            color: #196719;
+            font-family: "Nanum Myeongjo", serif;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .75);
+            width: 800px;
+            margin-left: 20px;
+        }
+
+        ul>li {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        ul>li>h2 {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        ul p {
+            display: table-cell;
+            vertical-align: top;
+            overflow: hidden;
+        }
+
+        ul>li:first-child {
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        ul>li:last-child {
+            border-radius: 0px 0px 4px 4px;
+        }
+
+        .header-title {
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: block;
+            box-sizing: border-box;
+            border-bottom: 1px solid #c7c2c2;
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 이 안에 웹페이지 코드가 들어갑니다. -->
+    <h1 class="header-title">Front End 구성</h1>
+    <ul>
+        <li>
+            <h2 class="first">HTML5</h2>
+            <p>
+                HTML5는 HTML의 완전한 5번째 버전으로 월드 와이드 웹 (World Wide Web)의 핵심 마크업 언어이다. 웹표준의 학샘이며 사실상 HTML이라기보단 거의 자바스크립트로
+                이루어진 표준이라 보는 것이 맞을 거 같다.
+            </p>
+        </li>
+        <li>
+            <h2 class="second">CSS</h2>
+            <p>
+                종속형 시트 또는 캐스케이딩 스타일 시트(Cascading Style Sheets, CSS)는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로, HTML과 XHTML에 주로 쓰이며,
+                XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다
+            </p>
+        </li>
+        <li>
+            <h2 class="third">JavaScript</h2>
+            <p>
+                자바스크립트(JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을
+                가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 사이드 네트워크 프로그래밍에도 사용되고 있다.
+            </p>
+        </li>
+    </ul>
+
+    <h1 class="header-title">Back End 구성</h1>
+    <ul>
+        <li>
+            <h2 class="first">JSP</h2>
+            <p>
+                자바서버 페이지(JavaServer Pages, JSP)는 HTML내에 자바 코드를 삽입하여 웹 서버에서 동적으로 웹 페이지를 생성하여 웹 브라우저에 돌려주는 언어이다. Java EE
+                스펙 중 일부로 웹 애플리케이션 서버에서 동작한다.
+            </p>
+        </li>
+        <li>
+            <h2 class="second">MySQL</h2>
+            <p>
+                MySQL(마이에스큐엘)는 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)이다. 다중 스레드, 다중 사용자 형식의 구조질의어 형식의 데이터베이스 관리 시스템으로서 MySQL
+                AB가 관리 및 지원하고 있으며, Qt처럼 이중 라이선스가 적용된다. 하나의 옵션은 GPL이며, GPL 이외의 라이선스로 적용시키려는 경우 전통적인 지적재산권 라이선스의 적용을 받는다.
+            </p>
+        </li>
+    </ul>
+</body>
+
+</html>

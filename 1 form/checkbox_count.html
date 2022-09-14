@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function count_check(obj) {
+            var chkBox = document.getElementByName("animal");
+            var chkCnt = 0;
+            for (var i = 0; i < chkBox.length; i++) {
+                if (chkBox[i].checked) {
+                    chkCnt++;
+                }
+            }
+            if (chkCnt > 2) {
+                alert("2개 까지 선택할 수 있음");
+                obj.checked = false;
+                return false;
+            }
+        }
+    </script>
+
+    <input type='checkbox' name='animal' value='selectall' onclick='selectAll(this)' /> <b>Select All</b>
+    <br />
+    <input type='checkbox' name='animal' value='dog' /> 개
+    <br />
+    <input type='checkbox' name='animal' value='cat' /> 고양이
+    <br />
+    <input type='checkbox' name='animal' value='rabbit' /> 토끼
+</body>
+
+</html>

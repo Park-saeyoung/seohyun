@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.menu {
+  width: 250px;
+  display: block;
+  overflow: hidden;
+}
+
+.menuItem {
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 15px 20px;
+  background-color: #c49ed7;
+  color: #fff;
+  position: relative;
+}
+
+.subMenu {
+  background: #ddd;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.subMenu a {
+  display: block;
+  padding: 15px 20px;
+  color: #222;
+  font-size: 14px;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+.subMenu a:hover {
+  background: #fafafa;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.subMenu a:last-child {
+  border: none;
+}
+
+.menuItem:target .subMenu {
+  max-height: 10em;
+}

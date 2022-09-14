@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <form>
+        <input type="range" id="a" min="0" max="100" step="10" name="rangeNum" list="tickmarks"
+            oninput="this.form.amountInput.value=this.value" />
+
+        <!-- <datalist id="tickmarks">
+            <option value="0" label="0%"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50" label="50%"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100" label="100%"></option>
+        </datalist> -->
+
+        <input type="number" name="amountInput" min="0" max="100" value="60"
+            oninput="this.form.amountInput.value=this.value">
+
+
+        <input type="range" id="b" min="0" max="100" step="10" name="rangeNum2"
+            oninput="this.form.amountInput.value=this.value" />
+        <input type="number" name="amountInput" min="0" max="100" value="60" oninput="this.value=this.value">
+
+
+        <input oninput="this.value = this.value.toUpperCase()" type="text" id="roleName" name="roleName"
+            class="form-control width200px" [(ngModel)]="role.roleName">
+
+        <input type="range" id="aaa" min="1" max="10" name="aaa">
+        <input oninput="this.value = aaa.value" onForminput="value=in_1.value"></input>
+
+
+        <input type="range" min="0" max="100" oninput="this.value = this.value" id="roleName" name="roleName"
+            class="form-control width200px" [(ngModel)]="role.roleName">
+
+
+
+
+    </form>
+</body>
+
+</html>

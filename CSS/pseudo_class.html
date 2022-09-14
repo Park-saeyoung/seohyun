@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: blue;
+            background-color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: green;
+            background-color: yellow
+        }
+
+        a:hover {
+            color: red;
+            background-color: green
+        }
+
+        a:focus {
+            color: aqua
+        }
+
+        input:focus {
+            background-color: green
+        }
+
+        li:nth-child(1) {
+            color: gold
+        }
+
+        li:nth-last-child(2) {
+            color: green
+        }
+
+        ul>li:last-child {
+            color: red
+        }
+
+        div>ul>li:hover {
+            background-color: yellow;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        #menu {
+            flex-direction: row;
+        }
+
+        /* #menu{
+            dis
+        } */
+    </style>
+</head>
+
+<body>
+
+    <a href="http://www.naver.com">www.naver.com</a>
+
+    <div>
+        <input type="text">
+    </div>
+
+    <div>
+        <ul>
+            <li>the first child</li>
+            <li>the second child</li>
+            <li>the third child</li>
+        </ul>
+    </div>
+
+    <div id="menu">
+        <div id="submenu1">submenu1</div>
+        <div id="submenu2">submenu1</div>
+        <div id="submenu3">submenu1</div>
+    </div>
+
+
+
+</body>
+
+</html>

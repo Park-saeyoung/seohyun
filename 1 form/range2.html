@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label> 좋아하는 꽃 이름을 입력하세요. </label> <br />
+        <input type="text" id="in_1" /> <br /> <br />
+        <table border="1">
+            <tr>
+                <th> 입력한 내용은 : </th>
+                <td> <output for="in_1" onForminput="value=in_1.value"> 입력 결과 </output> </td>
+            </tr>
+            <tr>
+                <th> 입력한 글자 수는 : </th>
+                <td> <output for="in_1" onForminput="value=in_1.value.length"> 글자 수 </output> </td>
+            </tr>
+        </table>
+
+        <div>
+            <label>Value:1</label>
+            <input type="range" name="point" min="0" max="10" step="1" value="0"
+                oninput="document.getElementById('value1').innerHTML=this.value">
+            <span id="value1"></span>
+        </div>
+
+    </form>
+</body>
+
+</html>

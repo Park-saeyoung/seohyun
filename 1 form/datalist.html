@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend> 스마트폰의 잘못된 사용으로 인한 가장 큰 피해는 무엇일까요? </legend>
+            <input type="text" name="talent" list="talent" />
+            <datalist id="talent">
+                <option value="집중력 저하">
+                <option value="게임과 채팅 중독">
+                <option value="거북목 증후군">
+                <option value="손목 터널 증후군">
+                <option value="안구 건조증">
+            </datalist>
+            <br /> <br />
+            <label> 당신의 선택은? : </label>
+            <output for="talent" onForminput="this.value=talent.value"> </output>
+        </fieldset>
+    </form>
+
+    <br><br>
+    <label for="ice-cream-choice">Choose a flavor:</label>
+    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+    <datalist id="ice-cream-flavors">
+        <option value="Chocolate">
+        <option value="Coconut">
+        <option value="Mint">
+        <option value="Strawberry">
+        <option value="Vanilla">
+    </datalist>
+
+
+    <br><br>
+    <label for="myBrowser">아래 목록에서 브라우저를 선택하세요:</label>
+    <input list="browsers" id="myBrowser" name="myBrowser" />
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Internet Explorer">
+        <option value="Opera">
+        <option value="Safari">
+        <option value="Microsoft Edge">
+    </datalist>
+
+
+</body>
+
+</html>
