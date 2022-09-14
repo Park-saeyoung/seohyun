@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2 {
+            color: red;
+            text-align: center;
+            background-color: yellow;
+            border: 1px solid;
+            font-family: "견고딕";
+            font-weight: bold;
+        }
+
+        label {
+            columns: black;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <h2>비행기 예약 </h2>
+        <hr>
+        <label>
+            왕복<input type="radio" name="round">
+        </label>
+        <label for="oneway">편도</label>
+        <input type="radio" name="round" id="oneway">
+        <br>
+
+        <br>
+        <h3>인원</h3><br>
+        성인:
+        <input type="range" id="adults" min="1" max="20" step="1" name="adults"
+            oninput="this.form.adults.value=this.value" />
+        <input type="number" name="adults" min="1" max="20" value="1" oninput="this.form.adults.value=this.value">
+
+        <!-- 아동:
+        <input type="range" id="kids" min="1" max="20" step="1" name="kids" oninput="this.form.kids.value=this.value" />
+        <input type="number" name="kids" min="1" max="20" value="1" oninput="this.form.kids.value=this.value"> -->
+
+        <br>
+
+
+        <label for="seat">좌석</label>
+        <select name="seat" required>
+            <option value="" selected>좌석 선택</option>
+            <option value="first">퍼스트클래스</option>
+            <option value="business">비지니스</option>
+            <option value="economy">이코노미</option>
+        </select>
+
+
+
+
+        <table border="5" style="text-align: center">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><img src="pizza1.jpg" width="150" height="150"></td>
+                <td><img src="pizza2.jpg" width="150" height="150"></td>
+                <td><img src="pizza3.jpg" width="150" height="150"></td>
+            </tr>
+        </table>
+        <hr>
+        고객이름: <input type="text" placeholder="이름"> <br> <br>
+        전화번호: <input type="text"> <br> <br>
+        메일주소: <input type="text"> <br> <br>
+        배달주소: <input type="text"> <br> <br>
+
+        <label>피자종류</label>
+        <select name="pizza_num" multiple>
+            <option value="pizza_1">고구마피자</option>
+            <option value="pizza_2">불고기피자</option>
+            <option value="pizza_3">하와이안피자</option>
+            <option value="pizza_4">마르게리따피자</option>
+        </select>
+
+
+        <fieldset>
+            <legend>피자크기</legend>
+            <label for="small">small</label>
+            <input type="checkbox" name="rd_btn" id="small">
+            <input type="radio" name="rd_btn" checked>Medium
+            <input type="radio" name="rd_btn">Large
+        </fieldset>
+
+        <fieldset>
+            <legend>피자 토핑 선택</legend>
+
+            <label for="bacon">베이컨</label>
+            <input type="checkbox" name="chk" id="bacon">
+
+
+            <input type="checkbox" name="chk">치즈
+            <input type="checkbox" name="chk">양파
+            <input type="checkbox" name="chk">버섯
+
+        </fieldset> <br> <br>
+
+        배달 요청 날짜:<input type="date"><br>
+        배달 요청 시간:<input type="time"><br>
+
+        <label>배달요청사항<br>
+            <textarea rows="2" cols="30" maxlength="50">여기에 작성하시오  
+                </textarea>
+        </label>
+        <br>
+        <form oninput="star.value=grade.value">
+            <label>별점</label>
+            <input type="range" min="0" max="10" step="2" name="grade" id="grade">
+            <output name="star" for="grade"></output>
+        </form>
+
+        <br>
+        <label>사진올리기</label>
+        <input type="file" accept="image/jpg">
+        <br><br>
+        <label>배달 만족도</label>
+        <input type="text" name="sat_list" list="sat_list">
+        <datalist id="sat_list">
+            <option value="매우빠름"></option>
+            <option value="빠름"></option>
+            <option value="보통"></option>
+            <option value="느림"></option>
+            <option value="매우느림"></option>
+        </datalist>
+
+        <div style="width:800px"> <strong style="display:block;margin:12px 0 4px"><a
+                    href="https://slidesplayer.org/slide/14037524/" title="HTML5 웹 프로그래밍 입문 (개정판) 4장. CSS3 스타일시트 기초."
+                    target="_blank">HTML5 웹 프로그래밍 입문 (개정판) 4장. CSS3 스타일시트 기초.</a></strong><iframe
+                src="https://player.slidesplayer.org/86/14037524/" width="800" height="649" frameborder="0"
+                marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0"
+                allowfullscreen></iframe>
+            <div style="padding:5px 0 12px"></div>
+        </div>
+
+
+
+</body>
+
+</html>
