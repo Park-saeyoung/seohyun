@@ -56,6 +56,14 @@
         /* #menu{
             dis
         } */
+
+        /* ul>li {
+            display: inline-block;
+        } */
+
+        .menu {
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -67,7 +75,7 @@
         <input type="text">
     </div>
 
-    <div>
+    <div class="menu">
         <ul>
             <li>the first child</li>
             <li>the second child</li>
@@ -75,7 +83,15 @@
         </ul>
     </div>
 
-    <div id="menu">
+    <div class="menu">
+        <ol>
+            <li>the first child</li>
+            <li>the second child</li>
+            <li>the third child</li>
+        </ol>
+    </div>
+
+    <div class="menu">
         <div id="submenu1">submenu1</div>
         <div id="submenu2">submenu1</div>
         <div id="submenu3">submenu1</div>
