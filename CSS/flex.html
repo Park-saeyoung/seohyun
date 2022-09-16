@@ -6,9 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .flex_container {
+            border: 1px solid rgb(15, 15, 15);
+            display: flex;
+            flex-direction: row;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        /* 주축의 방향은 flex container의 flex-direction 속성으로 결정 
+           flex-direction 기본값은 row
+           속성값 row는 주축의 방향을 왼쪽에서 오른쪽 방향 
+           flex-direction 속성의 column은 주축의 방향을 위에서 아래 방향 
+        */
+        /* flex container 속성: flex-direction, flex-wrap, 
+                        justify-content, align-items, align-content
+            flex item 속성: flex, flex-grow, flex-shrink, 
+                        flex-basis, order 
+        */
+        .flex_item {
+            border: 1px solid red;
+            margin: 10px;
+            width: 80px;
+            height: 50px;
+            background-color: rgb(121, 121, 7);
+            text-align: center;
+            /* text-decoration: underline; */
+            align-items: center;
+            line-height: 50px;
+            /* padding: 10px; */
+            /* padding: 10px 0px; */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="flex_container">
+        <div class="flex_item">flex_item</div>
+        <div class="flex_item">flex_item</div>
+        <div class="flex_item">flex_item</div>
+        <div class="flex_item">flex_item</div>
+        <div class="flex_item">flex_item</div>
+    </div>
+
+    <!-- 테스트 영역 -->
+
+
+
 </body>
 
 </html>

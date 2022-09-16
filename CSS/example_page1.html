@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* 기본 마진/패딩 제거 */
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            /* ul,li사용시 생기는 점 제거 */
+            list-style: none;
+        }
+
+        a {
+            /* a 사용시 생기는 언더라인 제거 */
+            text-decoration: none;
+        }
+
+        #header {
+            /* 일반적으로 사용되는 width크기 */
+            width: 1200px;
+            /* 실제 사이트에선 102.몇인데 그냥 100으로 함 */
+            height: 100px;
+            /* 페이지가 늘거나 줄어들어도 중앙에 위치하게끔 설정 */
+            margin: 0 auto;
+            /* 윗공간 여백 */
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        #logo {
+            /* logo 밑에 위치하던 menu를 logo 옆으로 붙여준다. */
+            float: left;
+        }
+
+        #menu {
+            /* menu를 header의 맨 오른쪽으로 붙인다 */
+            float: right;
+        }
+
+        #menu>li {
+            /* li들을 한줄에 위치하도록 해준다. */
+            float: left;
+        }
+
+        #menu>li>a {
+            /* width를 지정하기 위해 display 속성 변경 */
+            display: inline-block;
+            width: 180px;
+            /* 텍스트 중앙정렬 */
+            text-align: center;
+            /* header에서 padding-top을 20 줘서 위에는 20 밑에는 40 */
+            /* 패딩을 사용하지 않고 마진을 사용해서도 여백을 만들 수 있지만 */
+            /* 마진을 이용 시, 여백은 클릭이 되지 않는다. */
+            /* 패딩을 이용해서 접근성을 높였다. */
+            padding-top: 20px;
+            padding-bottom: 40px;
+            /* 글자굵기 굵게 */
+            font-weight: bold;
+            color: #004385;
+        }
+
+        #visual {
+            width: 100%;
+            /* absolute를 사용하기 위한 relative */
+            position: relative;
+        }
+
+        #visual_menu {
+            /* 실제 웹사이트에선 width를 100%로 지정했지만
+    페이지를 축소했을 때 회색박스가 이미지를 벗어나는게 보기싫어서
+    이미지 크기에 맞춰서 width를 지정했다.
+     */
+            width: 1920px;
+            height: 50px;
+
+            /* opacity와 rbga의 차이 */
+            /* opacity는 선택된 영역뿐만 아니라 자식노드에도 적용이 된다.
+  하지만 rbga는 자식요소를 제외하고 선택된 영역만 적용된다. */
+            background: rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            /* 부모요소에 static이 아닌 position 속성이 부여 되어 있으면
+  absolute가 부여된 노드는 부모요소 내에서 움직인다. */
+            /* 부모요소에 position 속성이 부여되어 있지 않으면,
+  body 영역 내에서 움직인다. */
+            position: absolute;
+            /* 부모영역내에서 bottom으로 부터 0px 만큼 움직인다. */
+            bottom: 0;
+        }
+
+        #visual>img {
+            /* inline-block으로 설정하면 inline의 성질을 갖게 되어
+    margi이 안먹히기 때문에, block으로 설정 */
+
+            /* display를 inline-block 으로 굳이 굳이 설정하고 싶으면
+    text-align: center; 를 사용한다. */
+
+            display: block;
+            /* margin: 0 auto; 를 사용하려면 width를 지정해줘야 하지만
+  여기선 width가 없어도 작동한다.
+  img 파일 자체에 width가 있기 때문인 것 같다.*/
+            margin: 0 auto;
+        }
+
+        #visual_menu {
+            /* 실제 웹사이트에선 width를 100%로 지정했지만
+    페이지를 축소했을 때 회색박스가 이미지를 벗어나는게 보기싫어서
+    이미지 크기에 맞춰서 width를 지정했다.
+     */
+            width: 1920px;
+            height: 50px;
+
+            /* opacity와 rbga의 차이 */
+            /* opacity는 선택된 영역뿐만 아니라 자식노드에도 적용이 된다.
+  하지만 rbga는 자식요소를 제외하고 선택된 영역만 적용된다. */
+            background: rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            /* positon relative를 적용하면
+  현재 위치에서 부터 top/bottom/left/right를 사용할 수 있다. */
+            position: relative;
+            /* visual_menu의 height 만큼 올려줬다. */
+            bottom: 50px;
+        }
+
+        #visual_menu>ul {
+            /* margin: 0 auto;를 이용하기 위한 width 설정
+    flex를 쓰면 좀더 편하게 할 수 있다. */
+            width: 800px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        #visual_menu>ul>li {
+            /* li 목록을 가로로 정렬해준다. */
+            float: left;
+        }
+
+        #visual_menu>ul>li>a {
+            /* padding을 적용해주기 위해 display 설정 변경
+    inline-block을 이용해도 된다. */
+            display: block;
+            color: white;
+            opacity: 0.7;
+            padding: 15px 24px;
+            box-sizing: border-box;
+        }
+
+        #visual_menu>ul>li>a.on {
+            background-color: black;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="wrap">
+        <div id="header">
+            <h1 id="logo">
+                <a href="./index.html">
+                    <img src="image1.jpg" alt="경일로고" />
+                </a>
+            </h1>
+            <ul id="menu">
+                <li>학교소개</li>
+                <li>교육과정</li>
+                <li>취업정보</li>
+                <li>커뮤니티</li>
+                <li>상담신청</li>
+            </ul>
+        </div>
+        <div id="visual">
+            <img src="" alt="" />
+            <div id="visual_menu">
+                <ul>
+                    <li><a href="#">학교소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">취업정보</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">상담신청</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
