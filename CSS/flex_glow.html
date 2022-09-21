@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            flex-grow: 1;
+            border: 2px solid red;
+            height: 30px;
+            margin: 10px;
+        }
+
+        .box1 {
+            flex-grow: 2;
+            border: 2px solid red;
+            height: 30px;
+            margin: 10px;
+        }
+
+        .box2 {
+            flex-grow: 1;
+            border: 2px solid red;
+            height: 30px;
+        }
+
+        .box3 {
+            flex-grow: 2;
+            border: 2px solid red;
+            height: 30px;
+        }
+
+        .box4 {
+            flex-grow: 3;
+            border: 2px solid red;
+            height: 30px;
+        }
+
+        #content {
+            display: flex;
+            width: 500px;
+        }
+
+        #content div {
+            flex-basis: 120px;
+            border: 3px solid rgba(0, 0, 0, .2);
+        }
+
+        .box {
+            flex-shrink: 1;
+        }
+
+        .box1 {
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h4>This is a Flex-Grow</h4>
+    <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+    <div class="content">
+        <div class="box" style="background-color:red;">A</div>
+        <div class="box" style="background-color:lightblue;">B</div>
+        <div class="box" style="background-color:yellow;">C</div>
+        <div class="box1" style="background-color:brown;">D</div>
+        <div class="box1" style="background-color:lightgreen;">E</div>
+        <div class="box" style="background-color:brown;">F</div>
+    </div>
+
+    <h5>flex-grow:1 . flex-grow:2 . flex-grow:3 .</h5>
+    <div class="content">
+        <div class="box2" style="background-color:red;">A</div>
+        <div class="box3" style="background-color:lightblue;">B</div>
+        <div class="box4" style="background-color:yellow;">C</div>
+    </div> -->
+
+    <p>The width of content is 500px; the flex-basis of the flex items is 120px.</p>
+    <p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+    <p>The width of D and E is less than the others.</p>
+    <div id="content">
+        <div class="box" style="background-color:red;">AAAAA</div>
+        <div class="box" style="background-color:lightblue;">BBBBB</div>
+        <div class="box" style="background-color:yellow;">CCCCC</div>
+        <div class="box1" style="background-color:brown;">DDDDD</div>
+        <div class="box1" style="background-color:lightgreen;">EEEEE</div>
+    </div>
+
+</body>
+
+</html>
