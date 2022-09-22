@@ -53,7 +53,6 @@
         .footer {
             position: absolute;
             /* display: block; */
-
             /* 이 부분을 고정 */
             bottom: 0%;
             /* 하단에 여백 없이 */
@@ -68,10 +67,34 @@
             /* background-color: yellowgreen; */
             text-align: center;
             /* padding-top: 20px; */
-            font-size: 18px;
+            font-size: 16px;
             /* font-weight: bold; */
             color: white;
+            /* width:가로; height:세로;  */
+            overflow: hidden;
+            /* width에서 지정해준 크기보다 더 크면 overflow의 속성에 따라 처리 */
+            /* visible: 박스를 넘어가면서 표시 (기본값) 
+            hidden: 벗어난 영역 숨김 
+            scroll: 벗어난 영역 스크롤 처리 
+            auto: 벗어난 영역 있을 경우 스크롤 처리 
+            text-overflow: ellipsis : 벗어난 영역 ... 처리  */
+
+            white-space: nowrap;
+            /* white-space 속성은 내부에서 자동 줄 바꿈 여부를 설성 */
+            /* normal : 기본값으로 글자 줄이 자동으로 바뀐다. 콘텐츠가 요소의 너비를 초과할 경우 다음 줄로 바뀐다.
+            nowrap : 줄 바꿈이 실행되지 않는다. 콘텐츠가 다음 줄로 바뀌지 않는다.
+            pre : 줄 바꿈과 기타 공백이 유지된다. 이 가능한 값은 !DOCTYPE 선언에서 표준 준수 모드를 지정할 경우에 지원된다. !DOCTYPE 선언에서 표준 준수 모드를 지정하지 않으면 이 값을 검색할 수는 있지만 렌더링에 양향을 주지 않으며 normal 값처럼 동작한다.
+            pre-line : 줄 바꿈 시퀀스가 유지된다.
+            pre-wrap : 줄 바꿈 시퀀스가 축소된다.
+            inherit : 부모 요소로부터 값을 상속 받는다. */
         }
+
+        /* .footer p {
+            width: 300px;
+            height: 80px;
+            overflow: hiddlen;
+            white-space: nowrap;
+        } */
     </style>
 </head>
 
@@ -114,11 +137,11 @@
     </div>
 
     <div class="footer">
-        <p>[13588] 경기 성남시 분당구 분당로 87 서현고등학교
-            Tel : Tel : ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412 ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간:
-            08:40-16:40)
-            ◈ 당직실 031-789-5310(야간, 휴일) |
-            Copyright © Gyeonggido Office of Education, All Right Reserved.</p>
+        <p>[13588] 경기 성남시 분당구 분당로 87 서현고등학교<br>
+            ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412<br>
+            ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간:08:40-16:40)<br>
+            Copyright © Gyeonggido Office of Education, All Right Reserved.
+        </p>
     </div>
 </body>
 
