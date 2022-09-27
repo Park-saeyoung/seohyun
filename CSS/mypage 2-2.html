@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        body {
+            color: purple;
+            background-color: rgb(196, 190, 9);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .nav li {
+            color: blue;
+            background-color: white;
+            margin: 10px;
+            padding: 5px;
+            border-right: 0.8em solid black;
+            font-family: '고딕체';
+        }
+
+        .nav {
+            position: fixed;
+            top: 100px;
+            left: 10px;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+
+        .nav li {
+            box-shadow: 4px 4px mediumspringgreen;
+        }
+
+        .main {
+            position: fixed;
+            top: 30px;
+            left: 170px;
+            width: 60%
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            /* 너비가 줄어도 줄바꿈 안함 */
+
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* flex에서 가운데 정렬(수평) */
+            align-items: center;
+            /* flex에서 가운데 정렬(수직) */
+        }
+
+        .aside {
+            position: fixed;
+            left: 80%;
+            height: 300px;
+            width: 200px;
+            color: black;
+            /* display: inline-block; */
+            margin-top: 120px;
+            /* width: 20%; */
+            margin-right: 10px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aside_list {
+            background-color: white;
+            border: 2px solid blue;
+        }
+
+        .signin {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background-color: white;
+            border: 2px solid blue;
+            margin-bottom: 20px;
+            /* margin-right: 0; */
+            flex-direction: column;
+            /* justify-content: left; */
+        }
+
+        .signin input {
+            margin: 3px;
+        }
+
+        #signin_btn {
+            background-image: url(naver_login.png);
+            background-size: 194px 22px;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <ul style="white-space: nowrap;">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">프로필</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">사진</a></li>
+            <li><a href="https://www.naver.com">네이버</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="logo">
+            <img src="logo.JPG" width="40" height="40">
+            <h1>My Page</h1>
+        </div>
+        <hr>
+        <h3>Welcome to My Page</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Libero sapiente ab quibusdam vitae tempore! Voluptates culpa,<br>
+            et soluta neque excepturi esse! Nam, ea? Error facilis<br>
+            aliquid, asperiores odio ipsam culpa?</p>
+    </div>
+    <div class="aside">
+        <div class="signin">
+            <!-- <img src="seohyun-logo.png" width="50" height="50">  -->
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <!-- <button>Sign in</button> -->
+            <input id="signin_btn" type="submit" value="">
+        </div>
+        <div class="aside_list">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <hr>
+        <p>[13588] 경기 성남시 분당구 분당로 87 서현고등학교<br>
+            Tel : ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412<br>
+            ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간: 08:40-16:40)<br>
+            Copyright © Gyeonggido Office of Education, All Right Reserved.
+        </p>
+    </div>
+
+</body>
+
+</html>

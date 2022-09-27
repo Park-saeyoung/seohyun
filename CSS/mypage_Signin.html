@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page(Sign in)</title>
+    <style>
+        body {
+            color: purple;
+            background-color: #d8da3d;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .nav {
+            /* border: 1px solid red; */
+            position: fixed;
+            /* display: inline-block; */
+            margin-top: 60px;
+            top: 50px;
+            left: 1em;
+            width: 9em;
+            border: 1px solid red;
+        }
+
+        .main {
+            position: fixed;
+            /* display: inline-block; */
+            /* border: 1px solid red; */
+            left: 180px;
+            width: 60%;
+            height: 500px;
+            margin-left: 20px;
+            /* height: 300px; */
+            white-space: nowrap;
+
+        }
+
+        .nav_menu li {
+            background-color: white;
+            margin: 0.5em 0;
+            padding: 0.3em;
+            border-right: 1em solid black;
+            box-shadow: 4px 4px;
+
+        }
+
+        .nav_menu {
+            list-style: none;
+        }
+
+        .footer {
+            position: absolute;
+            /* display: block; */
+            /* 이 부분을 고정 */
+            bottom: 0%;
+            /* 하단에 여백 없이 */
+            width: 100%;
+
+            left: 0%;
+            /* 왼쪽 여백 없이 */
+
+            /* 가로 사이즈를 브라우저에 가득 채움 */
+            height: 80px;
+            /* border: 1px solid red; */
+            /* background-color: yellowgreen; */
+            text-align: center;
+            /* padding-top: 20px; */
+            font-size: 12px;
+            /* font-weight: bold; */
+            color: rgb(20, 18, 18);
+            /* width:가로; height:세로;  */
+            overflow: hidden;
+            /* width에서 지정해준 크기보다 더 크면 overflow의 속성에 따라 처리 */
+            /* visible: 박스를 넘어가면서 표시 (기본값) 
+            hidden: 벗어난 영역 숨김 
+            scroll: 벗어난 영역 스크롤 처리 
+            auto: 벗어난 영역 있을 경우 스크롤 처리 
+            text-overflow: ellipsis : 벗어난 영역 ... 처리  */
+
+            white-space: nowrap;
+            /* white-space 속성은 내부에서 자동 줄 바꿈 여부를 설성 */
+            /* normal : 기본값으로 글자 줄이 자동으로 바뀐다. 콘텐츠가 요소의 너비를 초과할 경우 다음 줄로 바뀐다.
+            nowrap : 줄 바꿈이 실행되지 않는다. 콘텐츠가 다음 줄로 바뀌지 않는다.
+            pre : 줄 바꿈과 기타 공백이 유지된다. 이 가능한 값은 !DOCTYPE 선언에서 표준 준수 모드를 지정할 경우에 지원된다. !DOCTYPE 선언에서 표준 준수 모드를 지정하지 않으면 이 값을 검색할 수는 있지만 렌더링에 양향을 주지 않으며 normal 값처럼 동작한다.
+            pre-line : 줄 바꿈 시퀀스가 유지된다.
+            pre-wrap : 줄 바꿈 시퀀스가 축소된다.
+            inherit : 부모 요소로부터 값을 상속 받는다. */
+            padding-bottom: 20px;
+        }
+
+        /* .footer p {
+            width: 300px;
+            height: 80px;
+            overflow: hiddlen;
+            white-space: nowrap;
+        } */
+
+        .footer p {
+            margin: 20px;
+        }
+
+        .aside {
+            position: fixed;
+            left: 80%;
+            height: 300px;
+            width: 200px;
+            color: black;
+            /* display: inline-block; */
+            margin-top: 120px;
+            /* width: 20%; */
+            margin-right: 10px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aside_list {
+            background-color: white;
+            border: 2px solid blue;
+        }
+
+        .signin {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background-color: white;
+            border: 2px solid blue;
+            margin-bottom: 20px;
+            /* margin-right: 0; */
+            flex-direction: column;
+            /* justify-content: left; */
+        }
+
+        .signin input {
+            width: 180px;
+            margin: 5px;
+            /* width: 100%; */
+            justify-content: left;
+
+        }
+
+        .signin img {
+            margin: 5px;
+        }
+
+
+        /* .logo h1 {
+            display: inline-block;
+        } */
+
+        /* .logo img {
+            display: inline-block;
+        } */
+
+        .logo {
+            display: flex;
+            /* flex에서 요소 가운데정렬(가로) */
+            justify-content: center;
+            /* flex에서 요소 가운데정렬(세로) */
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+
+        .logo img {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav_menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">제품</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">게시판</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="logo">
+            <img src="seohyun-logo.png" width="40" height="30" alt>
+            <h1>My Shop</h1>
+        </div>
+        <hr>
+        <p>Welcom to my shop!</p>
+        <p>저희 홈페이지를 방문해 주셔서 감사합니다
+            언제나 최고의 제품을 소개하겠습니다.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia pariatur non delectus reprehenderit,<br>
+            sunt praesentium laborum porro consectetur? Ea consectetur sapiente iusto iure excepturi commodi<br>
+            tenetur suscipit sint cupiditate porro?</p>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <div class="photo">
+            <table border="0" cellspacing="10">
+                <tr>
+                    <th>사진1</th>
+                    <th>사진1</th>
+                    <th>사진1</th>
+                </tr>
+                <tr>
+                    <td><img src="image1.jpg " width="150" height="150"></td>
+                    <td><img src="image1.jpg " width="150" height="150"></td>
+                    <td><img src="image1.jpg " width="150" height="150"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="aside">
+        <div class="signin">
+            <!-- <img src="seohyun-logo.png" width="50" height="50">  -->
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <!-- <button>Sign in</button> -->
+            <input type="submit" value="Sign in">
+        </div>
+        <div class="aside_list">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+                <li>메뉴1</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <hr>
+        <p>[13588] 경기 성남시 분당구 분당로 87 서현고등학교<br>
+            ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412<br>
+            ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간:08:40-16:40)<br>
+            Copyright © Gyeonggido Office of Education, All Right Reserved.</p>
+    </div>
+</body>
+
+</html>
