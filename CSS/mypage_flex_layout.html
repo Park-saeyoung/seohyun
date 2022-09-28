@@ -61,13 +61,13 @@
             height: 500px;
         }
 
-        .nav {
+        .side_menu {
             /* margin-top: 80px; */
             list-style: none;
             /* margin-top: 10px; */
         }
 
-        .nav li {
+        .side_menu li {
             background-color: white;
             margin: 8px 0;
             padding: 0.5em;
@@ -89,6 +89,58 @@
         .footer span {
             text-align: center;
         }
+
+        .nav {
+            border: 3px solid red;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            width: 100%;
+            margin: 0;
+        }
+
+        .nav>div {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .logo {
+            float: left;
+            width: 180px;
+            text-align: center;
+            background-color: white;
+        }
+
+        /* GNB(Global Navigation Bar)는 사이트 전체에 동일하게 적용되는 최상위 네비게이션입니다.
+        대부분 메인메뉴, 대분류 메뉴, 전체 사이트에 공통으로 사용되는 메뉴바에 사용합니다.
+
+        LNB(Local Navigation Bar)는 GNB 메뉴의 서브 형태의 네비게이션입니다
+        서브 메뉴, 중분류 메뉴, 각 서브 분류에 사용되는 네비게이션 바 입니다.
+
+        SNB(Side Navigation Bar)는 왼쪽이나 오른쪽에 위치한 사이드바 형태의 네비게이션입니다.
+
+        FNB(Foot Navigation Bar)는 하단 메뉴, 하단 로고, 주소, 카피라이팅 영역에 사용되는 네비게이션입니다.
+        헤더의 nav bar 만들기는 gnb와 lnb만 사용합니다. */
+        .gnb {
+            width: calc(100% - 280px);
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(158, 233, 20);
+        }
+
+        .gnb a {
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .lnb {
+            float: right;
+            width: 100px;
+            text-align: center;
+            background-color: rgb(242, 26, 155);
+        }
     </style>
 </head>
 
@@ -97,9 +149,22 @@
         <h1 style="text-align:center">My Page</h1>
         <hr>
     </div>
+    <div class="nav">
+        <!-- logo -->
+        <div class="logo">logo</div>
+        <!-- gnb -->
+        <div class="gnb">
+            <a href="#">프리레슨</a>
+            <a href="#">부트캠프</a>
+            <a href="#">후기모음</a>
+            <a href="#">취업지원</a>
+        </div>
+        <!-- lnb -->
+        <div class="lnb">lnb</div>
+    </div>
     <div class="main">
         <div class="side_left">
-            <ul class="nav">
+            <ul class="side_menu">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">프로필</a></li>
                 <li><a href="#">게시판</a></li>
@@ -118,7 +183,7 @@
                 ipsum est quis. Maxime quos dignissimos consequatur.</p>
         </div>
         <div class="side_right">
-            <ul class="nav">
+            <ul class="side_menu">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">프로필</a></li>
                 <li><a href="#">게시판</a></li>
