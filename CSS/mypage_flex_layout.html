@@ -13,22 +13,51 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
-        .side_menu {
-            height: 200px;
-            display: inline-block;
-            border: 1px solid blue;
-        }
-
         .main {
             display: flex;
+            flex-direction: row;
             width: 100%;
-            border: 1px solid red;
+            border: 3px solid red;
+            justify-content: space-between;
         }
 
+        .side_left {
+            height: 300px;
+            display: block;
+            border: 1px solid blue;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .side_left ul {
+            /* display: table; */
+            border: 5px solid greenyellow;
+            width: 130px;
+            margin: auto;
+            /* margin-right: 20px; */
+        }
+
+        .side_right ul {
+            /* display: table; */
+            border: 5px solid greenyellow;
+            width: 130px;
+            margin: auto;
+            /* margin-right: 20px; */
+        }
+
+        .side_right {
+            height: 300px;
+            display: block;
+            border: 1px solid blue;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+
         .content {
-            display: inline-block;
+            display: block;
             border: 1px solid red;
-            width: 75%;
+            width: 60%;
             height: 500px;
         }
 
@@ -69,7 +98,7 @@
         <hr>
     </div>
     <div class="main">
-        <div class="side_menu">
+        <div class="side_left">
             <ul class="nav">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">프로필</a></li>
@@ -88,7 +117,7 @@
                 repellat aut exercitationem optio accusantium ea,
                 ipsum est quis. Maxime quos dignissimos consequatur.</p>
         </div>
-        <div class="side_menu">
+        <div class="side_right">
             <ul class="nav">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">프로필</a></li>
@@ -96,15 +125,15 @@
                 <li><a href="#">사진</a></li>
             </ul>
         </div>
-        </divmain>
-        <div class="footer">
-            <hr>
-            <span>
-                대한민국 경기도 성남시 분당구 서현동 1-1번지
-                전화번호:010-5127-????
-            </span>
+    </div>
+    <div class="footer">
+        <hr>
+        <span>
+            대한민국 경기도 성남시 분당구 서현동 1-1번지
+            전화번호:010-5127-????
+        </span>
 
-        </div>
+    </div>
     </div>
 </body>
 
