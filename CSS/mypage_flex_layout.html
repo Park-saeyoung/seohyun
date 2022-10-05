@@ -9,16 +9,18 @@
     <style>
         body {
             color: purple;
-            background-color: rgb(124, 112, 5);
+            /* background-color: rgb(124, 112, 5); */
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .main {
             display: flex;
             flex-direction: row;
-            width: 100%;
+            /* width: 100%; */
+            width: 1400px;
             border: 3px solid red;
             justify-content: space-between;
+            margin: 0 auto;
         }
 
         .side_left {
@@ -53,12 +55,12 @@
             margin: 0 auto;
         }
 
-
         .content {
             display: block;
             border: 1px solid red;
             width: 60%;
             height: 500px;
+            white-space: nowrap;
         }
 
         .side_menu {
@@ -97,8 +99,10 @@
         }
 
         .nav {
-            width: 100%;
-            margin: 0;
+            /* width: 100%; */
+            width: 1400px;
+            margin: auto;
+            overflow: hidden;
         }
 
         .nav>div {
@@ -110,7 +114,7 @@
             float: left;
             width: 180px;
             text-align: center;
-            background-color: white;
+            background-color: rgb(19, 68, 229);
         }
 
         /* GNB(Global Navigation Bar)는 사이트 전체에 동일하게 적용되는 최상위 네비게이션입니다.
@@ -127,7 +131,7 @@
             width: calc(100% - 280px);
             display: inline-block;
             text-align: center;
-            background-color: rgb(158, 233, 20);
+            /* background-color: rgb(158, 233, 20); */
         }
 
         .gnb a {
@@ -140,6 +144,52 @@
             width: 100px;
             text-align: center;
             background-color: rgb(242, 26, 155);
+        }
+
+        #dropdown {
+            display: block;
+            font: bold 16px "malgun gothic";
+            width: 560px;
+            height: 50px;
+            background: #ccc;
+            color: black;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        #dropdown>ul>li {
+            float: left;
+            width: 120px;
+            position: relative;
+        }
+
+        #dropdown>ul {
+            /* background-color: green; */
+            position: absolute;
+
+        }
+
+        #dropdown>ul>li>ul {
+            width: 120px;
+            display: none;
+            font-size: 14px;
+            position: absolute;
+            background: skyblue;
+        }
+
+        #dropdown>ul>li:hover>ul {
+            /* position: relative; */
+            display: block;
+        }
+
+        #dropdown>ul>li>ul>li:hover {
+            background: orange;
+            transition: ease 1s;
         }
     </style>
 </head>
@@ -154,10 +204,38 @@
         <div class="logo">logo</div>
         <!-- gnb -->
         <div class="gnb">
-            <a href="#">프리레슨</a>
-            <a href="#">부트캠프</a>
-            <a href="#">후기모음</a>
-            <a href="#">취업지원</a>
+            <div id="dropdown">
+                <ul>
+                    <li><a href="#">MENU1</a>
+                        <ul>
+                            <li><a href="#">SUB_MENU</a></li>
+                            <li><a href="#">SUB_MENU2</a></li>
+                            <li><a href="#">SUB_MENU3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU2</a>
+                        <ul>
+                            <li><a href="#">SUB_MENU</a></li>
+                            <li><a href="#">SUB_MENU2</a></li>
+                            <li><a href="#">SUB_MENU3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU3</a>
+                        <ul>
+                            <li><a href="#">SUB_MENU</a></li>
+                            <li><a href="#">SUB_MENU2</a></li>
+                            <li><a href="#">SUB_MENU3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU4</a>
+                        <ul>
+                            <li><a href="#">SUB_MENU</a></li>
+                            <li><a href="#">SUB_MENU2</a></li>
+                            <li><a href="#">SUB_MENU3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- lnb -->
         <div class="lnb">lnb</div>
@@ -176,10 +254,10 @@
         <hr> -->
             <p>Welcom to my page</p>
             <p>저희 홈페이지를 방문해주셔서 감사합니다.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Illo eum pariatur voluptate omnis, rerum tempora placeat
-                reiciendis
-                repellat aut exercitationem optio accusantium ea,
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                Illo eum pariatur voluptate omnis, rerum tempora placeat<br>
+                reiciendis<br>
+                repellat aut exercitationem optio accusantium ea,<br>
                 ipsum est quis. Maxime quos dignissimos consequatur.</p>
         </div>
         <div class="side_right">
