@@ -183,13 +183,16 @@
             display: none;
             font-size: 14px;
             position: absolute;
+            /* top: 80px; */
+            /* left: 20px; */
             background: skyblue;
+            /* 투명도 */
+            opacity: 0.7;
             padding: 0;
-            background-color: rgba(70, 30, 192, 0);
         }
 
         #dropdown>ul>li:hover>ul {
-            /* position: relative; */
+            transition: ease 1s;
             display: block;
             /* border: 2px solid red; */
         }
@@ -197,6 +200,32 @@
         #dropdown>ul>li>ul>li:hover {
             background: orange;
             transition: ease 1s;
+        }
+
+        .signin {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background-color: white;
+            border: 2px solid blue;
+            margin-bottom: 20px;
+            /* margin-right: 0; */
+            flex-direction: column;
+            /* justify-content: left; */
+        }
+
+        .signin input {
+            margin: 3px;
+        }
+
+        #signin_btn {
+            background-image: url(naver_login.png);
+            background-size: 194px 20px;
+            background-position: center;
+            width: 195px;
+            height: 30px;
+            border: 2px solid red;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -268,12 +297,22 @@
                 ipsum est quis. Maxime quos dignissimos consequatur.</p>
         </div>
         <div class="side_right">
-            <ul class="side_menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">프로필</a></li>
-                <li><a href="#">게시판</a></li>
-                <li><a href="#">사진</a></li>
-            </ul>
+            <div class="signin">
+                <!-- <img src="seohyun-logo.png" width="50" height="50">  -->
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <!-- <button id="signin_btn">Sign in</button> -->
+                <input id="signin_btn" type="submit" value="로그인">
+
+            </div>
+            <div>
+                <ul class="side_menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">프로필</a></li>
+                    <li><a href="#">게시판</a></li>
+                    <li><a href="#">사진</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer">
