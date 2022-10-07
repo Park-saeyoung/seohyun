@@ -94,12 +94,17 @@
         }
 
         .nav {
-            /* border: 3px solid red; */
-            justify-content: center;
+            display: flex;
+            border: 3px solid red;
+            /* justify-content: center; */
+            justify-content: space-around;
             align-items: center;
             width: 1400px;
             margin: auto;
             overflow: hidden;
+            flex-wrap: nowrap;
+
+
         }
 
         .nav>div {
@@ -125,10 +130,13 @@
         FNB(Foot Navigation Bar)는 하단 메뉴, 하단 로고, 주소, 카피라이팅 영역에 사용되는 네비게이션입니다.
         헤더의 nav bar 만들기는 gnb와 lnb만 사용합니다. */
         .gnb {
-            width: calc(100% - 280px);
+            /* width: calc(100% - 280px);
+             */
+            width: 600px;
             display: inline-block;
             text-align: center;
-            /* background-color: rgb(158, 233, 20); */
+            background-color: rgb(158, 233, 20);
+            border: 3px solid yellow;
         }
 
         .gnb a {
@@ -155,27 +163,34 @@
             height: 50px;
             background: #ccc;
             color: black;
-            line-height: 50px;
+            line-height: 40px;
             margin: 0 auto;
-            text-align: center;
+            /* text-align: center; */
+            border: 3px solid rgb(35, 15, 184);
+            /* overflow: hidden; */
         }
 
         ul li {
             list-style: none;
         }
 
+        #dropdown>ul {
+            position: absolute;
+            border: 3px solid black;
+            margin: 0;
+            /* text-align: center; */
+            width: 500px;
+        }
+
         #dropdown>ul>li {
             float: left;
             width: 120px;
-            position: relative;
+            /* position: relative; */
             /* border: 3px solid blue; */
             height: 50px;
             line-height: 50px;
-        }
-
-        #dropdown>ul {
-            position: absolute;
-            margin: 0;
+            /* overflow: hidden; */
+            /* flex-wrap: nowrap; */
         }
 
         #dropdown>ul>li>ul {
@@ -187,7 +202,7 @@
             /* left: 20px; */
             background: skyblue;
             /* 투명도 */
-            opacity: 0.7;
+            /* opacity: 0.7; */
             padding: 0;
         }
 
@@ -195,6 +210,7 @@
             transition: ease 1s;
             display: block;
             /* border: 2px solid red; */
+
         }
 
         #dropdown>ul>li>ul>li:hover {
