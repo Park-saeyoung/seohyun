@@ -156,65 +156,46 @@
             color: #333;
         }
 
-        #dropdown {
-            display: block;
-            font: bold 16px "malgun gothic";
-            width: 560px;
-            height: 50px;
-            background: #ccc;
-            color: black;
-            line-height: 40px;
-            margin: 0 auto;
-            /* text-align: center; */
-            border: 3px solid rgb(35, 15, 184);
-            /* overflow: hidden; */
-        }
-
-        ul li {
+        ul>li {
             list-style: none;
         }
 
+        #dropdown {
+            border: 3px dotted black;
+            height: 40px;
+            font: bold 16px "malgun gothic";
+            color: red;
+            margin: 0 auto;
+            background-color: rgb(204, 209, 214);
+        }
+
         #dropdown>ul {
-            position: absolute;
-            border: 3px solid black;
+            border: 2px solid red;
             margin: 0;
-            /* text-align: center; */
-            width: 500px;
+            /* position: absolute; */
         }
 
         #dropdown>ul>li {
             float: left;
             width: 120px;
-            /* position: relative; */
-            /* border: 3px solid blue; */
             height: 50px;
             line-height: 50px;
-            /* overflow: hidden; */
-            /* flex-wrap: nowrap; */
         }
 
         #dropdown>ul>li>ul {
             width: 120px;
-            display: none;
-            font-size: 14px;
             position: absolute;
-            /* top: 80px; */
-            /* left: 20px; */
-            background: skyblue;
-            /* 투명도 */
-            /* opacity: 0.7; */
+            display: none;
             padding: 0;
+            background-color: skyblue;
         }
 
         #dropdown>ul>li:hover>ul {
-            transition: ease 1s;
             display: block;
-            /* border: 2px solid red; */
-
         }
 
         #dropdown>ul>li>ul>li:hover {
-            background: orange;
+            background-color: orange;
             transition: ease 1s;
         }
 
