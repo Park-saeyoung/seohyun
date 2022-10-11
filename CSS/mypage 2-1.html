@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page 2-1</title>
+    <style>
+        body {
+            color: purple;
+            background-color: rgba(197, 134, 7, 0.23);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .nav li {
+            background-color: white;
+            margin: 10px 0;
+            padding: 7px;
+            border-right: 1em solid black;
+            font-family: '고딕체';
+            box-shadow: -4px -4px;
+
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+
+        .nav {
+            position: fixed;
+            top: 120px;
+            left: 10px;
+        }
+
+        .main {
+            position: fixed;
+            top: 30px;
+            left: 160px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+
+        }
+
+        .footer p {
+            color: rgb(131, 13, 21);
+            font-size: 10px;
+            text-align: center;
+            white-space: nowrap;
+            /* 영역을 벗어나도 줄바꿈 안함 */
+        }
+
+        .logo h1 {
+            display: inline-block;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            /* flex에서 요소들의 정렬(수평) */
+            align-items: center;
+            /* flex에서 요소들의 정렬(수직) */
+        }
+
+        .photo_table {
+            border: 1px;
+        }
+
+        .photo_table img {
+            box-shadow: 4px 4px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">프로필</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">사진</a></li>
+            <li><a href="https://www.naver.com">네이버</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.JPG" width="40" height="30">
+            <h1>My Page</h1>
+        </div>
+        <hr>
+
+        <p>Welcome to My page</p>
+        <p>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aperiam repudiandae
+            veritatis tempore deserunt quia, accusamus
+            quasi voluptate dicta, saepe enim provident quas? Est inventore
+            molestias veniam, fugit accusantium odio cum?
+        </p>
+        <div class="photo">
+            <table class="photo_table">
+                <tr>
+                    <th>발리</th>
+                    <th>하와이</th>
+                    <th>몰디브</th>
+                </tr>
+                <tr>
+                    <td><img src="images/bali.jpg" width="150px"></td>
+                    <td><img src="images/Hawaii.jpg" width="150px"></td>
+                    <td><img src="images/mdv.jpg" width="150px"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <hr>
+        <pre>            [13588] 경기 성남시 분당구 분당로 87 서현고등학교
+            ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412
+            ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간: 08:40-16:40)
+             Copyright © Gyeonggido Office of Education, All Right Reserved.
+        </pre>
+    </div>
+</body>
+
+</html>
