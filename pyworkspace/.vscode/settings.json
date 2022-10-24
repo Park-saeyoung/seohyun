@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.analysis.extraPaths": [
+        "./rock_fall",
+        "./rock_fall",
+        "./pingpong_game1",
+        "./pingpong_game1",
+        "./pingpong_game2",
+        "./pingpong_game2",
+        "./pingpong_game"
+    ]
+}
