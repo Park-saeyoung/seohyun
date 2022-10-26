@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박세영</title>
+    <style>
+        body{
+            color:purple;
+            background-color: rgb(124, 112, 5);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .side_left{
+            border: 2px solid blue;
+            display: block;
+            /* margin-left: 0px; */
+        }
+        .side_right{
+            border: 2px solid blue;
+            display: block;
+            /* margin-left: 0px; */
+        }
+        .main{
+            border: 2px solid yellow;
+            display: block;
+            width: 70%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .nav{
+            list-style: none;
+        }
+        .nav_right{
+            border: 2px solid blue;
+            list-style: none;
+        }
+        .nav li{
+            background-color: white;
+            margin: 8px 0;
+            padding: 0.5em;
+            border-right: 15px solid black;
+            font-family: '명조체';
+            box-shadow: 4px 4px;
+        }
+        .nav_right li{
+            margin: 8px 0;
+            padding: 0.5em;
+        }
+        .footer{
+            border: 2px solid red;
+            position: absolute;
+            bottom: 0%;
+            padding: 10px;        
+            text-align: center;
+            color: white;
+            height: 80px;
+            width: 100%;
+            white-space: nowrap;
+        }
+        .footer span{
+            text-align: center;
+        }
+        .page_title{
+            text-align: center;
+        }
+        .logo{
+            border: 2px solid paleturquoise;
+            display:flex;
+            justify-content: center;
+            /* flex에서 요소의 가운데 정렬(수평) */
+            align-items: center;
+            /* flex에서 요소의 가운데 정렬(수직)  */
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+        }
+        .nav_menu{
+            display: flex;
+            border: 3px solid black;
+            justify-content: center;
+        }
+        .nav_menu>ul{
+            float: left;
+            list-style: none;
+        }
+        .login{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login>input {
+            margin: 3px;
+        }
+        #login_btn{
+            background-image: url(login_btn.jpg);
+            background-size: 190px 30px;
+            background-position: center;
+            height: 30px;
+            width: 195px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page_title">
+        <div class="logo">
+            <img src="logo.JPG" width="70px" height="50px">
+            <h1>박세영</h1>
+        </div>
+        <hr>   
+    </div>
+    <div class="nav_menu">
+        <ul>
+            <li>메뉴1</li>
+        </ul>
+        <ul>
+            <li>메뉴2</li>
+        </ul>
+        <ul>
+            <li>메뉴3<li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="side_left">
+            <ul class="nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">프로필</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">사진</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <p>Welcom to my page</p>
+            <p>저희 홈페이지를 방문해주셔서 감사합니다.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Illo eum pariatur voluptate omnis, rerum tempora placeat
+                reiciendis 
+                repellat aut exercitationem optio accusantium ea, 
+                ipsum est quis. Maxime quos dignissimos consequatur.</p>
+                <table border="0">
+                    <tr>
+                        <th>사진1</th>
+                        <th>사진2</th>
+                        <th>사진3</th>
+                    </tr>
+                    <tr>
+                        <td><img src="bali.jpg" width="150px" height="150px"></td>
+                        <td><img src="Hawaii.jpg" width="150px" height="150px"></td>
+                        <td><img src="mdv.jpg" width="150px" height="150px"></td>
+                    </tr>
+                </table>
+        </div>
+        <div class="side_right">
+            <div class="login">
+                <input type="text" placeholder="아이디">
+                <input type="password" placeholder="비번">
+                <input id="login_btn" type="submit" value="">
+            </div>
+            <ul class="nav_right">
+                <li><a href="#">자료실1</a></li>
+                <li><a href="#">자료실2</a></li>
+                <li><a href="#">자료실3</a></li>
+                <li><a href="#">질의/응답</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <hr>
+        <p>
+            [13588] 경기 성남시 분당구 분당로 87 서현고등학교<br>
+            ◈ 교무실 031-701-5993~6 /Fax : 031-702-8412<br>
+            ◈ 행정실 031-702-8485 / Fax. 031-701-5105(근무시간: 08:40-16:40)<br>
+            Copyright © Gyeonggido Office of Education, All Right Reserved.<br>
+        </p>
+    </div>
+</body>
+</html>

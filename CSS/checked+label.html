@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-chek,
+        .form-radio {
+            display: inline-block;
+            line-height: 20px;
+            vertical-align: middle;
+        }
+
+        .form-chek::before,
+        .form-radio::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin-right: 8px;
+        }
+
+        .form-radio::before {
+            border-radius: 50%;
+        }
+
+        .input-chek,
+        .input-radio {
+            display: none;
+        }
+
+        .input-chek:checked+.form-chek::before,
+        .input-radio:checked+.form-radio::before {
+            background: #749fbb;
+        }
+
+        .input-chek:checked+.form-chek,
+        .input-radio:checked+.form-radio {
+            color: #749fbb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-checkbox-wrap">
+        <p class="form-sub-title">체크박스 : </p>
+        <sapn class="form-inline"> <input type="checkbox" class="input-chek" name="check1" id="check1"><label
+                for="check1" class="form-chek">체크1</label> </sapn>
+        <sapn class="form-inline"> <input type="checkbox" class="input-chek" name="check2" id="check2"><label
+                for="check2" class="form-chek">체크2</label> </sapn>
+        <sapn class="form-inline"> <input type="checkbox" class="input-chek" name="check3" id="check3"><label
+                for="check3" class="form-chek">체크3</label> </sapn>
+    </div>
+    <div class="form-radio-wrap">
+        <p class="form-sub-title">라디오 : </p>
+        <sapn class="form-inline"> <input type="radio" class="input-radio" name="radio" id="radio1"><label for="radio1"
+                class="form-radio">라디오1</label></sapn>
+        <sapn class="form-inline"> <input type="radio" class="input-radio" name="radio" id="radio2"><label for="radio2"
+                class="form-radio">라디오2</label></sapn>
+        <sapn class="form-inline"> <input type="radio" class="input-radio" name="radio" id="radio3"><label for="radio3"
+                class="form-radio">라디오3</label></sapn>
+    </div>
+
+</body>
+
+</html>
