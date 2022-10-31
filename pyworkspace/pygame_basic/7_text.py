@@ -1,4 +1,5 @@
 import pygame
+import os
 
 pygame.init()
 
@@ -10,9 +11,12 @@ pygame.display.set_caption("New Game")
 
 clock = pygame.time.Clock()
 
-background = pygame.image.load("D:\\pyworkspace\\pygame_basic\\background.png")
+current_path = os.path.dirname(__file__)
 
-character = pygame.image.load("D:\\pyworkspace\\pygame_basic\\character.png")
+background = pygame.image.load(os.path.join(current_path, "background.png"))
+character = pygame.image.load(os.path.join(current_path, "character.png"))
+
+enemy = pygame.image.load(os.path.join(current_path, "enemy.png"))
 
 character_size = character.get_rect().size
 character_width = character_size[0]
@@ -26,15 +30,16 @@ to_y = 0
 
 character_speed = 0.2
 
-enemy = pygame.image.load("D:\\pyworkspace\\pygame_basic\\enemy.png")
-
 enemy_size = enemy.get_rect().size
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
 enemy_x_pos = screen_width/2 - enemy_width/2
 enemy_y_pos = screen_height/2 - enemy_height
 
-game_font = pygame.font.Font(None, 40)
+
+# game_font = pygame.font.Font(None, 40)
+# SysFont("글꼴", 크기, 굵기여부, 기울기(여부))
+game_font = pygame.font.SysFont('arial',30, True, True)
 
 total_time = 10
 #시작시간
@@ -91,10 +96,12 @@ while running:
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
 
     #경과 시간
+    # get_ticks(): pygame.init()이 호출된 이후 흐른 시간(ms)를 리턴해주므로 계속 증가하는 값
     elapsed_time = (pygame.time.get_ticks() - start_titcks) / 1000
 
-    #출력할 글자, True, 글자색
-    timer = game_font.render(str(int(total_time-elapsed_time)), True, (255,255,255))
+    #출력할 글자, True, 글자색 (텍스트, antialias, 색(튜플), 텍스트 배경색(튜플))
+    #antialias : 높은 해상도의 신호를 낮은 해상도에서 나타낼 때 생기는 계단 현상을 최소화
+    timer = game_font.render(str(int(total_time-elapsed_time)), True, (255,255,255),(0,0,0))
 
     screen.blit(timer, (10,10))
 
@@ -103,9 +110,7 @@ while running:
         running = False
 
     pygame.display.update()
-pygame.time.delay(2000)
+    # pygame.time.delay(2000)
 
     
-
-
 pygame.quit()

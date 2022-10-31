@@ -163,3 +163,5 @@ def rockfall():
     
     pygame.quit()
     return score
+
+ rockfall()

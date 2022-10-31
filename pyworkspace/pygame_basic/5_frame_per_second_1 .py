@@ -9,12 +9,12 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 
 pygame.display.set_caption("New Game")
 
-clock = pygame.time.Clock()
 
 current_path = os.path.dirname(__file__)
 
 background = pygame.image.load(os.path.join(current_path, "background.png"))
 character = pygame.image.load(os.path.join(current_path, "character.png"))
+
 
 character_size = character.get_rect().size
 character_width = character_size[0]
@@ -26,21 +26,10 @@ running = True
 to_x = 0
 to_y = 0
 
-character_speed = 0.2
-
-enemy = pygame.image.load(os.path.join(current_path, "enemy.png"))
-
-enemy_size = enemy.get_rect().size
-enemy_width = enemy_size[0]
-enemy_height = enemy_size[1]
-enemy_x_pos = screen_width/2 - enemy_width/2
-enemy_y_pos = screen_height/2 - enemy_height
-
+character_speed = 20
 
 while running:
-    dt = clock.tick(60)
 
-    print("Fps :" + str(clock.get_fps()))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -60,8 +49,10 @@ while running:
             elif event.key ==pygame.K_UP or event.key == pygame.K_DOWN:
                 to_y = 0 
 
-    character_x_pos += to_x * dt
-    character_y_pos += to_y * dt
+
+    character_x_pos += to_x
+    character_y_pos += to_y
+
     if character_x_pos <= 0:
         character_x_pos = 0
     elif character_x_pos >= screen_width - character_width:
@@ -72,21 +63,8 @@ while running:
     elif character_y_pos > screen_height - character_height:
         character_y_pos = screen_height - character_height
 
-    character_rect = character.get_rect()
-    character_rect.left = character_x_pos
-    character_rect.top = character_y_pos
-
-    # 이미지 크기의 직사각형 모양 불러오기
-    enemy_rect = enemy.get_rect()
-    enemy_rect.left = enemy_x_pos
-    enemy_rect.top = enemy_y_pos
-
-    if character_rect.colliderect(enemy_rect):
-        print("충돌 발생!!!!!")
-
     screen.blit(background,(0,0))
     screen.blit(character, (character_x_pos, character_y_pos))
-    screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
     pygame.display.update()
 
 pygame.quit()

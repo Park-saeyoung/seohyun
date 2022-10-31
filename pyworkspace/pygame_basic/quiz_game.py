@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 #기본 초기화
 pygame.init()
@@ -17,27 +18,32 @@ clock = pygame.time.Clock()
 
 #1. 사용자 게임 초기화(배경화면, 게임 이미지, 좌표, 속도, 폰트 등등)
 #배경 만들기
-background = pygame.image.load("D:\\pyworkspace\\pygame_basic\\background.png")
 #캐릭터 만들기
-character = pygame.image.load("D:\\pyworkspace\\pygame_basic\\character.png")
+current_path = os.path.dirname(__file__)
+
+background = pygame.image.load(os.path.join(current_path, "background.png"))
+character = pygame.image.load(os.path.join(current_path, "character.png"))
+enemy = pygame.image.load(os.path.join(current_path, "enemy.png"))
+
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
 character_x_pos = (screen_width/2) - (character_width/2)
 character_y_pos = screen_height - character_height
 
-enemy = pygame.image.load("D:\\pyworkspace\\pygame_basic\\enemy.png")
 enemy_size = enemy.get_rect().size
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
 enemy_x_pos = random.randint(0, screen_width - enemy_width)
 enemy_y_pos = 0
+
+#적의 속도
 enemy_speed = 10
  
 #이동 위치
 to_x = 0
 to_y = 0
-character_speed = 3
+character_speed = 0.5
 
 running = True
 
@@ -57,8 +63,8 @@ while running:
             if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:
                 to_x = 0
 
-    # character_x_pos += to_x * dt
-    # character_y_pos += to_y * dt
+    character_x_pos += to_x * dt
+    character_y_pos += to_y * dt
 
     #3. 가로 경계값 처리
     if character_x_pos <=0:
@@ -87,9 +93,8 @@ while running:
 
     if character_rect.colliderect(enemy_rect):
         print("***충돌***")
-        enemy_y_pos = screen_height - enemy_height*2
-
-         
+        # enemy_y_pos = screen_height - enemy_height*2
+        # enemy_y_pos = screen_height
 
     #7. 화면에 그리기
     screen.blit(background,(0,0))

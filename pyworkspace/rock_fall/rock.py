@@ -45,7 +45,7 @@ fighter = fighter_image.get_rect(centerx=SCREEN_WIDTH//2, bottom=SCREEN_HEIGHT)
 rocks = []
 
 for i in range(3):
-    rand_k = random.randrange(1, 2)
+    # rand_k = random.randrange(1, 2)
     rock = rock_image.get_rect(left=(i+1)*100, top=0)
     rocks.append(rock)
 

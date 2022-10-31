@@ -1,4 +1,5 @@
 import pygame # 1. pygame 선언
+import os
  
 pygame.init() # 2. pygame 초기화
  
@@ -9,10 +10,13 @@ screen = pygame.display.set_mode(size)
  
 done= False
 clock= pygame.time.Clock()
- 
+
+current_path = os.path.dirname(__file__)
+
 # pygame에 사용하도록 비행기 이미지를 호출
-airplane = pygame.image.load('D:\\workspace\\python\\pyworkspace\\pygame_flight\\images\\plane.png')
+airplane = pygame.image.load(os.path.join(current_path,"images\\plane.png"))
 airplane = pygame.transform.scale(airplane, (60, 45))
+
  
 # 4. pygame 무한루프
 def runGame():

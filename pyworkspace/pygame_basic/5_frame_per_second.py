@@ -1,4 +1,5 @@
 import pygame
+import os
 
 pygame.init()
 
@@ -8,11 +9,15 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 
 pygame.display.set_caption("New Game")
 
+#초당 프레임수 설정을 위한 변수
 clock = pygame.time.Clock()
 
-background = pygame.image.load("D:\\pyworkspace\\pygame_basic\\background.png")
+current_path = os.path.dirname(__file__)
 
-character = pygame.image.load("D:\\pyworkspace\\pygame_basic\\character.png")
+background = pygame.image.load(os.path.join(current_path, "background.png"))
+character = pygame.image.load(os.path.join(current_path, "character.png"))
+
+
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
@@ -23,11 +28,18 @@ running = True
 to_x = 0
 to_y = 0
 
-character_speed = 0.5
+FPS=120
+
+#이동 속도 조절용 변수
+# character_speed = 0.5
+character_speed = 10
 
 while running:
-    dt = clock.tick(30)
+    #FPS 초당 프레임 수 설정
+    #  tick() 함수는 주어진 FPS 값을 넘지 않기 위해 딜레이를 주는 함수/ 프레임 수가 많을수록 
+    dt = clock.tick(FPS)
 
+    #프레임 수 확인
     print("Fps :" + str(clock.get_fps()))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -48,8 +60,15 @@ while running:
             elif event.key ==pygame.K_UP or event.key == pygame.K_DOWN:
                 to_y = 0 
 
-    character_x_pos += to_x * dt
-    character_y_pos += to_y * dt
+    character_x_pos += to_x
+    character_y_pos += to_y
+
+    # dt를 곱해서 프레임 수에 따른 이동 속도를 동일하게 맞춤 
+    # 프레임 수가 많을수록(속도 증가) dt값이 낮아져 속도를 균일하게 유지함
+    # character_x_pos += to_x * dt
+    # character_y_pos += to_y * dt
+
+
     if character_x_pos <= 0:
         character_x_pos = 0
     elif character_x_pos >= screen_width - character_width:
@@ -64,7 +83,6 @@ while running:
     screen.blit(character, (character_x_pos, character_y_pos))
     pygame.display.update()
 
-    
-
+    print("dt :" + str(dt))
 
 pygame.quit()
