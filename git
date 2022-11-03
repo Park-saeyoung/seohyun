@@ -1,0 +1,30 @@
+echo "# seohyun-class" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Park-saeyoung/seohyun-class.git
+
+//git push [원격저장소 별명] [브랜치 명] : 원격저장소에 [브랜치 명]의 작업내용을 전달
+git push -u origin main   //   git push origin --all
+
+
+git remote add [원격저장소 별명] [원격저장소 주소] : 원격저장소 추가
+git remote -v : 원격저장소 목록 확인
+git remote add origin https://github.com/Park-saeyoung/seohyun-mycom.git
+git config --global user.email "heavens78@naver.com"
+
+
+git remote add py https://github.com/Park-saeyoung/python.git
+( git remote remove py)
+
+ git fetch : 원격 저장소의 변경 사항(commit) 들을 로컬저장소로 가져온다. (commit 내역을 가져온다)
+ git pull   : 원격 저장소의 변경사항을 가져와 로컬에 병합한다.
+
+ 즉, git pull은 git fetch하고 git merge까지 해준다고 볼 수 있다. 
+
+git pull origin master  //origin의 내용이 master로 복사
+git config --global credential.helper 'store --file  // 해당 경로에 비밀번호가 저장된 파일이 생성
+git clone // [저장소 주소] 저장소의 내용을 다운로드받고 자동으로 init
+
+git merge origin/master를 통해 원격저장소의 변경내역과 병합
