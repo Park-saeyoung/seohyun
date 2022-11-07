@@ -121,5 +121,6 @@ while running:
     screen.blit(enemy2, (enemy2_x_pos, enemy2_y_pos))
 
     pygame.display.update()
+    # aaa
 
 pygame.quit()
