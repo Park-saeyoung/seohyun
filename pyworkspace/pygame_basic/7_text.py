@@ -36,10 +36,16 @@ enemy_height = enemy_size[1]
 enemy_x_pos = screen_width/2 - enemy_width/2
 enemy_y_pos = screen_height/2 - enemy_height
 
+game_font = pygame.font.Font(None, 40)
 
-# game_font = pygame.font.Font(None, 40)
-# SysFont("글꼴", 크기, 굵기여부, 기울기(여부))
+# SysFont("글꼴", 크기, 굵기여부, 기울기(여부))  -> 폰트 가져오기
 game_font = pygame.font.SysFont('arial',30, True, True)
+
+
+font1 = pygame.font.SysFont(None,30)
+img1 = font1.render('HELLO WOLRD! 안녕하세요!',True,(0,255,0))
+screen.blit(img1, (50,50))
+
 
 total_time = 10
 #시작시간

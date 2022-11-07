@@ -1,6 +1,7 @@
 import sys
 import pygame
 import random
+import os
 
 def pingpong_game():
 
@@ -15,11 +16,24 @@ def pingpong_game():
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-    button_image = pygame.image.load("D:\\workspace\\python\\workspace\\pythonproject\\python_game\\image\\playbutton.png")
-    #button2_image = pygame.image.load("D:\\workspace\\pythonproject\\pingpong_game\\images\\stop.png")
-    stop_image = pygame.image.load("D:\\workspace\\python\\workspace\\pythonproject\\python_game\\image\\stop.png")
+    # button_image = pygame.image.load("D:\\workspace\\ython\\workspace\\pythonproject\\pingpong_game\\images\\playbutton.png")
+    # #button2_image = pygame.image.load("D:\\workspace\\pythonproject\\pingpong_game\\images\\stop.png")
+    # stop_image = pygame.image.load("D:\\workspace\\ython\\workspace\\pythonproject\\pingpong_game\\stop.png")
+    # stop1 = stop_image.get_rect(centerx=SCREEN_WIDTH // 2, centery= 70)
+    # bgm_sound = pygame.mixer.Sound("D:\\workspace\\ython\\workspace\\pythonproject\\pingpong_game\\sounds\\bgm.mp3")
+
+    current_path = os.path.dirname(__file__)
+    image_path = os.path.join(current_path, "images")
+    sound_path = os.path.join(current_path, "sounds")
+
+    #이미지 로드
+    button_image = pygame.image.load(os.path.join(image_path, "playbutton.png"))
+    stop_image = pygame.image.load(os.path.join(image_path, "stop.png"))
     stop1 = stop_image.get_rect(centerx=SCREEN_WIDTH // 2, centery= 70)
-    bgm_sound = pygame.mixer.Sound("D:\\workspace\\python\\workspace\\pythonproject\\python_game\\sounds\\bgm.mp3")
+    bgm_sound = pygame.mixer.Sound(os.path.join(sound_path, "bgm.mp3"))
+
+
+
 
 
     #패들 좌표,사이즈 설정
@@ -178,3 +192,4 @@ def pingpong_game():
     pygame.quit()
     # sys.exit()
     return score1
+pingpong_game()

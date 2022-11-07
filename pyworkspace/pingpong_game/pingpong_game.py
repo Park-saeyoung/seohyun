@@ -308,5 +308,7 @@ def pingpong_game():
         pygame.display.update()
         clock.tick(30)
 
-pygame.quit()
-sys.exit()
+    pygame.quit()
+    sys.exit()
+
+pingpong_game()

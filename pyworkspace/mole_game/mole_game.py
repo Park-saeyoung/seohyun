@@ -249,3 +249,5 @@ def mole():
     # pygame.quit()
     # sys.exit()
     return
+
+mole()

@@ -24,6 +24,7 @@ current_path = os.path.dirname(__file__)
 background = pygame.image.load(os.path.join(current_path, "background.png"))
 character = pygame.image.load(os.path.join(current_path, "character.png"))
 enemy = pygame.image.load(os.path.join(current_path, "enemy.png"))
+enemy2 = pygame.image.load(os.path.join(current_path, "enemy.png"))
 
 character_size = character.get_rect().size
 character_width = character_size[0]
@@ -37,8 +38,16 @@ enemy_height = enemy_size[1]
 enemy_x_pos = random.randint(0, screen_width - enemy_width)
 enemy_y_pos = 0
 
+enemy2_size = enemy.get_rect().size
+enemy2_width = enemy_size[0]
+enemy2_height = enemy_size[1]
+enemy2_x_pos = random.randint(0, screen_width - enemy_width)
+enemy2_y_pos = 0
+
+
 #적의 속도
 enemy_speed = 10
+enemy2_speed = 10
  
 #이동 위치
 to_x = 0
@@ -82,6 +91,11 @@ while running:
         enemy_x_pos = random.randint(0, screen_width - enemy_width)
         enemy_y_pos = 0
 
+    enemy2_y_pos += enemy2_speed
+    if enemy2_y_pos == screen_height:
+        enemy2_x_pos = random.randint(0, screen_width - enemy2_width)
+        enemy2_y_pos = 0
+
     #6. 충돌 처리
     character_rect = character.get_rect()
     character_rect.left = character_x_pos
@@ -90,6 +104,10 @@ while running:
     enemy_rect = enemy.get_rect()
     enemy_rect.left = enemy_x_pos
     enemy_rect.top = enemy_y_pos
+
+    enemy2_rect = enemy.get_rect()
+    enemy2_rect.left = enemy_x_pos
+    enemy2_rect.top = enemy_y_pos
 
     if character_rect.colliderect(enemy_rect):
         print("***충돌***")
@@ -100,6 +118,7 @@ while running:
     screen.blit(background,(0,0))
     screen.blit(character,(character_x_pos,character_y_pos))
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
+    screen.blit(enemy2, (enemy2_x_pos, enemy2_y_pos))
 
     pygame.display.update()
 

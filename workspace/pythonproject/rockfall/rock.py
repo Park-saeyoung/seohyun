@@ -66,7 +66,7 @@ def rockfall():
     game_over = False
     #돌 안겹치게 여러개 생성
     for i in range(3):
-    #    rock = rock_image.get_rect(left=random.randrange(0, 350), top=0)
+        # rock = rock_image.get_rect(left=random.randrange(0, 350), top=0)
         rock = rock_image.get_rect(left=(i+1)*100, top=0)
         rocks.append(rock)
 
@@ -164,4 +164,4 @@ def rockfall():
     pygame.quit()
     return score
 
- rockfall()
+rockfall()

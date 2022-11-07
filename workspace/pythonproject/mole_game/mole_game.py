@@ -142,3 +142,5 @@ def mole_game():
         clock.tick(30)
     pygame.quit()
     return
+
+mole_game()
